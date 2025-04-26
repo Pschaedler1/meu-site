@@ -574,7 +574,7 @@ body {
   background-color: #e6ffe6;
 }@media (max-width: 768px) {
   body {
-    padding-top: 200px; /* aumenta o espaço no mobile */
+    padding-top: 400px; /* aumenta o espaço no mobile */
   }
 }
 
