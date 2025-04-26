@@ -607,5 +607,40 @@ body {
     flex-direction: column;
     gap: 10px;
   }
+}header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
+nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.header-social {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+/* Responsivo para telas menores */
+@media (min-width: 768px) {
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  nav {
+    flex-direction: row;
+  }
+
+  .header-social {
+    margin-top: 0;
+  }
+}
+
 
