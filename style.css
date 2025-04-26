@@ -1,181 +1,644 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfólio Digital</title>
+/* Estilos Gerais */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="imagens/favicon.ico.jpg" type="image/x-icon">
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f9f9f9;
+  padding-top: 120px; 
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px 0;
+}
+
+/* Header */
+.header {
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: linear-gradient(135deg, #000000 0%, #001d4e 100%);
+  padding: 2rem 0;
+  color: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.logo h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.logo span {
+  color: #ffd700;
+}
+
+.logo p {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+}
+
+.nav-links a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #ffd700;
+  transition: width 0.3s;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.header-social {
+  display: flex;
+  gap: 1rem;
+  margin-left: 2rem;
+}
+
+.header-social img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s;
+}
+
+.header-social img:hover {
+  transform: scale(1.2);
+}
+
+/* Seção Sobre com Imagem de Fundo */
+.about.with-bg-image {
+  background: 
+    linear-gradient(rgba(12, 11, 11, 0.85), rgba(5, 4, 4, 0.85)),
+    url('imagens/fundo-sobre.jpg.png') center/cover no-repeat fixed;
+  padding: 100px 0;
+  margin: 40px 0;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.about-flex {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 40px;
+  border-radius: 8px;
+  backdrop-filter: blur(3px);
+}
+
+.profile-pic {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #000000;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.profile-pic:hover {
+  transform: scale(1.05);
+}
+
+.about-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.about h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.contacts p {
+  margin-top: 10px;
+  color: #555;
+}
+
+/* Seção Hard Skills - ESTILO ATUALIZADO */
+.skills {
+  background: #0077b6;
+  background: linear-gradient(135deg, #000000 0%, #000d38 100%);
+  padding: 80px 0;
+  color: white;
+  border-radius: 10px;
+  margin: 40px 0;
+  box-shadow: 0 8px 20px rgba(0, 119, 182, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.skills::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
+  transform: rotate(30deg);
+  z-index: 0;
+}
+
+.skills .container {
+  position: relative;
+  z-index: 1;
+}
+
+.skills h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2.2rem;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.skills ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  gap: 20px;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+.skills li {
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  padding: 12px 25px;
+  border-radius: 30px;
+  font-weight: 600;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(5px);
+  transition: all 0.3s ease;
+}
+
+.skills li:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Seção Portfólio */
+.portfolio {
+  padding: 80px 0;
+  background: #fff;
+}
+
+.portfolio h2 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.project-card {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.project-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.project-card h3 {
+  padding: 20px 20px 10px;
+  color: #333;
+}
+
+.project-card p {
+  padding: 0 20px 20px;
+  color: #666;
+}
+
+/* Seção Techs */
+.techs {
+  background: #f0f0f0;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.tech-icons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 40px 0;
+}
+
+.tech-icons img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  transition: all 0.3s ease;
+  filter: grayscale(30%);
+}
+
+.tech-icons img:hover {
+  filter: grayscale(0%);
+  transform: scale(1.1);
+}
+
+/* Seção Contato */
+.contact {
+  padding: 80px 0;
+  background: #fff;
+  text-align: center;
+}
+
+.contact h2 {
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.form-group {
+  margin-bottom: 25px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+  transition: border 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #0077b6;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.btn {
+  background: #000000;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.btn:hover {
+  background: #00ff4c;
+}
+
+/* Footer */
+.footer {
+  background: #00071f;
+  color: #fff;
+  text-align: center;
+  padding: 30px 0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .header .container {
+    flex-direction: column;
+    gap: 15px;
+  }
   
-  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
-</head>
-
-<body>
-
-  <header class="header" data-aos="fade-up" data-aos-delay="100">
-    <div class="container header-container">
-      <div class="logo">
-        <h1>👋 Olá! Eu sou <span>Pedro Schaedler</span></h1>
-        <p>Bem-vindo ao meu Portfólio!</p>
-      </div>
+  .header nav {
+    margin-top: 15px;
+  }
   
-      <nav class="nav-menu" data-aos="fade-up" data-aos-delay="150">
-        <ul class="nav-links">
-          <li><a href="#about">Sobre</a></li>
-          <li><a href="#portfolio">Portfólio</a></li>
-          <li><a href="#techs">Techs</a></li>
-          <li><a href="#contact">Contato</a></li>
-        </ul>
+  .header nav a {
+    margin: 0 10px;
+  }
   
-        <div class="header-social" data-aos="fade-up" data-aos-delay="200">
-          <a href="https://github.com/Pschaedler1" target="_blank" class="social-icon" aria-label="GitHub">
-            <img src="imagens/github-mark.png" alt="GitHub">
-          </a>
-          <a href="https://www.linkedin.com/in/pedro-schaedler-8949b6362/" target="_blank" class="social-icon" aria-label="LinkedIn">
-            <img src="imagens/InBug-Black.png" alt="LinkedIn">
-          </a>
-          <a href="https://www.instagram.com/pedro.schaedler/" target="_blank" class="social-icon" aria-label="Instagram">
-            <img src="imagens/instagram.png" alt="Instagram">
-          </a>
-        </div>
-      </nav>
-    </div>
-  </header>
-
-  <section id="about" class="about with-bg-image" data-aos="fade-up" data-aos-delay="250">
-    <div class="container">
-      <div class="about-flex">
-        <div class="about-image">
-          <img src="imagens/fotoperfil.jpg" class="profile-pic" alt="Foto de Pedro Schaedler">
-        </div>
-        <div class="about-text">
-          <h2>👨‍💻 Sobre Mim</h2>
-          <p>🎓 Atualmente estou cursando <strong>Ciências da Computação</strong> e sou apaixonado por <strong>tecnologia</strong> e <strong>programação</strong>!</p>
-          <p>🚀 Sempre buscando me aprimorar e aprender coisas novas na área de TI.</p>
-          <div class="contacts">
-            <p>📧 <strong>Email Pessoal:</strong> dinho_schaedler_@hotmail.com</p>
-            <p>🎓 <strong>Email Acadêmico:</strong> 1137073@atitus.edu.br</p>
-            <p>📱 <strong>Telefone:</strong> (54) 99598-1889</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="skills" data-aos="fade-up" data-aos-delay="300">
-    <div class="container">
-      <h2>💻 Hard Skills</h2>
-      <div class="skills-grid">
-        <div class="skill-card">🐍 Python</div>
-        <div class="skill-card">🌐 HTML</div>
-        <div class="skill-card">🎨 CSS</div>
-        <div class="skill-card">📜 JavaScript</div>
-        <div class="skill-card">🖌️ PhotoShop</div>
-      </div>
-    </div>
-  </section>
-
-  <section id="portfolio" class="portfolio" data-aos="fade-up" data-aos-delay="350">
-    <div class="container">
-      <h2> Meus Projetos</h2>
-      <div class="projects">
-        <div class="project-card" data-aos="fade-up" data-aos-delay="350">
-          <img src="imagens/Calculadora.png" alt="Projeto Calculadora">
-          <h3>🧮 Calculadora Básica</h3>
-          <p>Criei uma calculadora funcional em Python com interface simples e intuitiva.</p>
-        </div>
+  .about-flex {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
   
-        <div class="project-card" data-aos="fade-up" data-aos-delay="350">
-          <img src="imagens/tarefas.png" alt="Projeto Lista de Tarefas">
-          <h3>📝 Lista de Tarefas</h3>
-          <p>Aplicação para organização de tarefas diárias, com sistema de marcação.</p>
-        </div>
+  .projects {
+    grid-template-columns: 1fr;
+  }
   
-        <div class="project-card" data-aos="fade-up" data-aos-delay="350">
-          <img src="imagens/jogo-velha.png" alt="Projeto Jogo da Velha">
-          <h3>🎮 Jogo da Velha</h3>
-          <p>Clássico jogo da velha interativo, desenvolvido para treinar lógica de programação.</p>
-        </div>
+  .tech-icons {
+    gap: 20px;
+  }
   
-        <div class="project-card" data-aos="fade-up" data-aos-delay="350">
-          <img src="imagens/cronometro.jpg" alt="Projeto Cronômetro">
-          <h3>⏱️ Cronômetro Online</h3>
-          <p>Criei um cronômetro funcional utilizando JavaScript e design responsivo.</p>
-        </div>
+  .tech-icons img {
+    width: 60px;
+    height: 60px;
+  }
   
-        <div class="project-card" data-aos="fade-up" data-aos-delay="350">
-          <img src="imagens/conversor.png" alt="Projeto Conversor de Moedas">
-          <h3>💱 Conversor de Moedas</h3>
-          <p>Aplicativo simples para conversão de moedas em tempo real usando API gratuita.</p>
-        </div>
+  .skills li {
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-pic {
+    width: 150px;
+    height: 150px;
+  }
   
-        <div class="project-card" data-aos="fade-up" data-aos-delay="350">
-          <img src="imagens/previsao-tempo.jpg" alt="Projeto Previsão do Tempo">
-          <h3>🌦️ App de Clima</h3>
-          <p>Aplicativo que mostra a previsão do tempo em tempo real com consumo de API.</p>
-        </div>
+  .skills li {
+    padding: 8px 15px;
+    font-size: 14px;
+  }
   
-        <div class="project-card" data-aos="fade-up" data-aos-delay="350">
-          <img src="imagens/Jogo-celta.jpg" alt="Projeto Jogo do celta">
-          <h3>🌐 Jogo para um trabalho da faculdade</h3>
-          <p>fiz um jogo para um trabalho da faculdade em python sobre um celta.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+  .contact-form {
+    padding: 0 15px;
+  }
+  
+  .about-flex {
+    padding: 20px;
+  }
+  
+  .skills h2 {
+    font-size: 1.8rem;
+  }
+}
+.about {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #f0f0f0, #ffffff);
+}
 
-  <section id="techs" class="techs" data-aos="fade-up" data-aos-delay="400">
-    <div class="container">
-      <h2>Minhas Techs</h2>
-      <div class="tech-icons">
-        <img src="imagens/foto-.jpg.png" alt="Python">
-        <img src="imagens/html.png" alt="HTML">
-        <img src="imagens/css.png" alt="CSS">
-        <img src="imagens/java-script.png" alt="JavaScript">
-        <img src="imagens/adobe-photoshop.png" alt="PhotoShop">
-      </div>
-    </div>
-  </section>
+.about-flex {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 40px;
+}
 
-  <section id="contact" class="contact" data-aos="fade-up" data-aos-delay="1500">
-    <div class="container">
-      <h2>Fale Comigo!</h2>
-      <form class="contact-form" action="https://formspree.io/f/xdkgkgdv" method="POST">
-        <div class="form-group">
-          <label for="name">Nome</label>
-          <input type="text" id="name" name="name" placeholder="Digite seu nome" required>
-        </div>
-        
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" placeholder="Digite seu email" required>
-        </div>
-        
-        <div class="form-group">
-          <label for="message">Mensagem</label>
-          <textarea id="message" name="message" rows="5" placeholder="Me envie uma mensagem" required></textarea>
-        </div>
-        
-        <button type="submit" class="btn">Enviar Mensagem</button>
-      </form>
-    </div>
-  </section>
+.about-image {
+  flex: 1;
+  text-align: center;
+}
 
-  <footer class="footer" data-aos="fade-up" data-aos-delay="1600">
-    <div class="container"> 
-      <p>© 2025 Pedro Schaedler. Todos os direitos reservados.</p>
-    </div>
-  </footer>
+.profile-pic {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #000000;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
 
- 
-  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-  <script>
-    AOS.init({
-      duration: 1000,
-      once: true
-    });
-  </script>
+.profile-pic:hover {
+  transform: scale(1.05);
+}
 
-</body>
-</html>
+.about-text {
+  flex: 2;
+}
+
+.about-text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.about-text p {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.contacts p {
+  font-size: 1rem;
+  margin-top: 10px;
+  color: #666;
+}
+
+.contacts strong {
+  color: #000;
+}
+.skills {
+  padding: 80px 0;
+  background: #00091a;
+  text-align: center;
+}
+
+.skills h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #ffffff;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+.skill-card {
+  background: #000000;
+  border: 2px solid #000000;
+  border-radius: 12px;
+  padding: 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s, background 0.3s;
+  width: 100%;
+  max-width: 200px;
+}
+
+.skill-card:hover {
+  transform: translateY(-8px);
+  background: #4CAF50;
+  color: #fff;
+}
+.portfolio {
+  padding: 80px 0;
+  background: #ffffff;
+  text-align: center;
+}
+
+.portfolio h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.project-card {
+  background: #f9f9f9;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.project-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.project-card h3 {
+  font-size: 1.5rem;
+  color: #000000;
+  margin-bottom: 10px;
+}
+
+.project-card p {
+  font-size: 1rem;
+  color: #666;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  background-color: #e6ffe6;
+}@media (max-width: 768px) {
+  body {
+    padding-top: 250px; /* aumenta mais ainda pra compensar o header maior */
+  }
+  
+  .header {
+    padding: 1rem 0; /* diminui a altura do header no mobile */
+  }
+  
+  .logo h1 {
+    font-size: 1.5rem; /* diminui o tamanho do título no mobile */
+  }
+  
+  .logo p {
+    font-size: 0.9rem; /* ajusta subtítulo */
+  }
+}@media (max-width: 768px) {
+  .header-social {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-links {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.header-social {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+/* Responsivo para telas menores */
+@media (min-width: 768px) {
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  nav {
+    flex-direction: row;
+  }
+
+  .header-social {
+    margin-top: 0;
+  }
+}
