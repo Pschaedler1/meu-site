@@ -12,6 +12,18 @@
 </head>
 
 <body>
+  <script>
+    function ajustarPadding() {
+      const header = document.querySelector('.header');
+      const body = document.body;
+      const alturaHeader = header.offsetHeight;
+      body.style.paddingTop = alturaHeader + 'px';
+    }
+  
+    window.addEventListener('load', ajustarPadding);
+    window.addEventListener('resize', ajustarPadding);
+  </script>
+  
 
   <header class="header" data-aos="fade-up" data-aos-delay="100">
     <div class="container header-container">
