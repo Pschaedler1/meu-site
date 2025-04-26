@@ -574,19 +574,19 @@ body {
   background-color: #e6ffe6;
 }@media (max-width: 768px) {
   body {
-    padding-top: 250px; /* aumenta mais ainda pra compensar o header maior */
+    padding-top: 400px; /* aumenta mais ainda pra compensar o header maior */
   }
   
   .header {
-    padding: 1rem 1; /* diminui a altura do header no mobile */
+    padding: 0rem 5; /* diminui a altura do header no mobile */
   }
   
   .logo h1 {
-    font-size: 1.5rem; /* diminui o tamanho do título no mobile */
+    font-size: 0.5rem; /* diminui o tamanho do título no mobile */
   }
   
   .logo p {
-    font-size: 0.4rem; /* ajusta subtítulo */
+    font-size: 0.9rem; /* ajusta subtítulo */
   }
 }@media (max-width: 768px) {
   .header-social {
