@@ -10,7 +10,7 @@ body {
   line-height: 1.6;
   color: #333;
   background-color: #f9f9f9;
-  padding-top: 120px; 
+  padding-top: 0px; 
 }
 
 .container {
@@ -156,67 +156,60 @@ body {
 
 /* Seção Hard Skills - ESTILO ATUALIZADO */
 .skills {
-  background: #0077b6;
-  background: linear-gradient(135deg, #000000 0%, #000d38 100%);
-  padding: 80px 0;
-  color: white;
-  border-radius: 10px;
-  margin: 40px 0;
-  box-shadow: 0 8px 20px rgba(0, 119, 182, 0.3);
-  position: relative;
-  overflow: hidden;
-}
-
-.skills::before {
-  content: "";
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
-  transform: rotate(30deg);
-  z-index: 0;
-}
-
-.skills .container {
-  position: relative;
-  z-index: 1;
+  background: linear-gradient(135deg, #000814, #001D3D);
+  padding: 4rem 2rem;
+  border-radius: 20px;
+  margin: 2rem auto;
+  max-width: 900px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  animation: fadeIn 1s ease-in-out;
 }
 
 .skills h2 {
-  text-align: center;
-  margin-bottom: 40px;
-  font-size: 2.2rem;
   color: white;
-  text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  font-size: 2rem;
+  margin-bottom: 2rem;
 }
 
-.skills ul {
+.skills-list {
+  list-style: none;
+  padding: 0;
   display: flex;
   flex-wrap: wrap;
-  list-style: none;
-  gap: 20px;
   justify-content: center;
-  padding: 0 20px;
+  gap: 2rem;
 }
 
-.skills li {
-  background: rgba(255, 255, 255, 0.15);
+.skills-list li {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1rem 2rem;
+  border-radius: 12px;
   color: white;
-  padding: 12px 25px;
-  border-radius: 30px;
-  font-weight: 600;
-  border: 2px solid rgba(255, 255, 255, 0.3);
-  backdrop-filter: blur(5px);
-  transition: all 0.3s ease;
+  font-size: 1.2rem;
+  transition: transform 0.3s, background 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
-.skills li:hover {
-  background: rgba(255, 255, 255, 0.25);
-  transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+.skills-list li:hover {
+  background: #FFD700;
+  color: #001D3D;
+  transform: scale(1.1);
 }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 
 /* Seção Portfólio */
 .portfolio {
@@ -430,277 +423,71 @@ body {
     font-size: 1.8rem;
   }
 }
-.about {
-  padding: 80px 0;
-  background: linear-gradient(135deg, #f0f0f0, #ffffff);
-}
 
-.about-flex {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 40px;
-}
+/* --- AQUI ENTRA O NOVO CSS QUE VOCÊ MANDOU: --- */
 
-.about-image {
-  flex: 1;
-  text-align: center;
-}
-
-.profile-pic {
-  width: 250px;
-  height: 250px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 4px solid #000000;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  transition: transform 0.3s ease;
-}
-
-.profile-pic:hover {
-  transform: scale(1.05);
-}
-
-.about-text {
-  flex: 2;
-}
-
-.about-text h2 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  color: #333;
-}
-
-.about-text p {
-  font-size: 1.2rem;
-  margin-bottom: 10px;
-  color: #555;
-}
-
-.contacts p {
-  font-size: 1rem;
-  margin-top: 10px;
-  color: #666;
-}
-
-.contacts strong {
-  color: #000;
-}
-.skills {
-  padding: 80px 0;
-  background: #00091a;
-  text-align: center;
-}
-
-.skills h2 {
-  font-size: 2.5rem;
-  margin-bottom: 40px;
-  color: #ffffff;
-}
-
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 20px;
-  justify-items: center;
-}
-
-.skill-card {
-  background: #000000;
-  border: 2px solid #000000;
-  border-radius: 12px;
-  padding: 20px;
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: #ffffff;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  transition: transform 0.3s, background 0.3s;
-  width: 100%;
-  max-width: 200px;
-}
-
-.skill-card:hover {
-  transform: translateY(-8px);
-  background: #4CAF50;
-  color: #fff;
-}
-.portfolio {
-  padding: 80px 0;
-  background: #ffffff;
-  text-align: center;
-}
-
-.portfolio h2 {
-  font-size: 2.5rem;
-  margin-bottom: 40px;
-  color: #333;
-}
-
-.projects {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
-}
-
-.project-card {
-  background: #f9f9f9;
-  border-radius: 12px;
-  padding: 20px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  transition: transform 0.3s, background-color 0.3s;
-}
-
-.project-card img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 8px;
-  margin-bottom: 15px;
-}
-
-.project-card h3 {
-  font-size: 1.5rem;
-  color: #000000;
-  margin-bottom: 10px;
-}
-
-.project-card p {
-  font-size: 1rem;
-  color: #666;
-}
-
-.project-card:hover {
-  transform: translateY(-8px);
-  background-color: #e6ffe6;
-}@media (max-width: 768px) {
-  body {
-    padding-top: 400px; /* aumenta mais ainda pra compensar o header maior */
-  }
-  
-  .header {
-    padding: 0rem 5; /* diminui a altura do header no mobile */
-  }
-  
-  .logo h1 {
-    font-size: 0.5rem; /* diminui o tamanho do título no mobile */
-  }
-  
-  .logo p {
-    font-size: 0.9rem; /* ajusta subtítulo */
-  }
-}@media (max-width: 768px) {
-  .header-social {
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-  }
-
-  nav {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .nav-links {
-    margin-top: 10px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-}
-.header-right {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-}
-
-.nav-links {
-  display: flex;
-  gap: 1.5rem;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.nav-links a {
+header {
+  background: linear-gradient(135deg, #000814, #001D3D);
   color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+header h1 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+header .highlight {
+  color: #FFD700; /* cor amarela para destacar o nome */
+}
+
+header p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+nav a {
   text-decoration: none;
-  font-weight: 500;
+  color: white;
   font-size: 1.1rem;
-  transition: color 0.3s;
+  position: relative;
 }
 
-.nav-links a:hover {
-  color: #ffd700;
+nav a:hover::after, nav a.active::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #FFD700;
+  margin-top: 5px;
+  border-radius: 2px;
 }
 
-/* Ajuste para mobile */
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.socials img {
+  width: 24px;
+  height: 24px;
+}
+
+/* RESPONSIVO */
 @media (max-width: 768px) {
-  .header-right {
-    flex-direction: column;
-    gap: 1rem;
-    margin-top: 1rem;
-  }
-  
-  .nav-links {
+  nav {
+    flex-wrap: wrap;
     gap: 1rem;
   }
 }
-/* Estilos Responsivos para celular */
-@media (max-width: 768px) {
-  /* Header */
-  .header-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .nav-links {
-    flex-direction: column;
-    gap: 1rem;
-    margin-top: 20px;
-  }
-
-  .header-social {
-    margin: 20px 0 0;
-    justify-content: center;
-  }
-
-  /* Sobre */
-  .about-flex {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .profile-pic {
-    width: 150px;
-    height: 150px;
-  }
-
-  /* Skills */
-  .skills ul {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  /* Projetos */
-  .projects {
-    grid-template-columns: 1fr; /* Só 1 card por linha */
-  }
-
-  /* Techs */
-  .tech-icons {
-    flex-direction: column;
-  }
-
-  /* Formulário de Contato */
-  .contact-form {
-    padding: 0 20px;
-  }
-
-  /* Botão */
-  .btn {
-    width: 100%;
-    padding: 15px;
-  }
-}
-
