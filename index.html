@@ -12,19 +12,6 @@
 </head>
 
 <body>
-  <script>
-    function ajustarPadding() {
-      const header = document.querySelector('.header');
-      const body = document.body;
-      const alturaHeader = header.offsetHeight;
-      body.style.paddingTop = alturaHeader + 'px';
-    }
-  
-    window.addEventListener('load', ajustarPadding);
-    window.addEventListener('resize', ajustarPadding);
-  </script>
-  
-
   <header class="header" data-aos="fade-up" data-aos-delay="100">
     <div class="container header-container">
       <div class="logo">
@@ -32,15 +19,18 @@
         <p>Bem-vindo ao meu Portfólio!</p>
       </div>
   
-      <nav class="nav-menu" data-aos="fade-up" data-aos-delay="150">
-        <ul class="nav-links">
-          <li><a href="#about">Sobre</a></li>
-          <li><a href="#portfolio">Portfólio</a></li>
-          <li><a href="#techs">Techs</a></li>
-          <li><a href="#contact">Contato</a></li>
-        </ul>
+      <div class="header-right">
+        <nav class="nav-menu" data-aos="fade-up" data-aos-delay="150">
+          <ul class="nav-links">
+            <li><a href="#about">Sobre</a></li>
+            <li><a href="#portfolio">Portfólio</a></li>
+            <li><a href="#techs">Techs</a></li>
+            <li><a href="#contact">Contato</a></li>
+          </ul>
+        </nav>
   
         <div class="header-social" data-aos="fade-up" data-aos-delay="200">
+          <div class="header-social" data-aos="fade-up" data-aos-delay="200">
           <a href="https://github.com/Pschaedler1" target="_blank" class="social-icon" aria-label="GitHub">
             <img src="imagens/github-mark.png" alt="GitHub">
           </a>
@@ -54,6 +44,12 @@
       </nav>
     </div>
   </header>
+        </div>
+      </div>
+    </div>
+  </header>
+ 
+  
 
   <section id="about" class="about with-bg-image" data-aos="fade-up" data-aos-delay="250">
     <div class="container">
