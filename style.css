@@ -588,7 +588,24 @@ body {
   .logo p {
     font-size: 0.9rem; /* ajusta subtítulo */
   }
+}@media (max-width: 768px) {
+  .header-social {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-links {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
 }
-
-
 
