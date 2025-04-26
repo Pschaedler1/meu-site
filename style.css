@@ -578,7 +578,7 @@ body {
   }
   
   .header {
-    padding: 1rem 0; /* diminui a altura do header no mobile */
+    padding: 1rem 1; /* diminui a altura do header no mobile */
   }
   
   .logo h1 {
@@ -586,7 +586,7 @@ body {
   }
   
   .logo p {
-    font-size: 0.9rem; /* ajusta subtítulo */
+    font-size: 0.4rem; /* ajusta subtítulo */
   }
 }@media (max-width: 768px) {
   .header-social {
@@ -607,7 +607,7 @@ body {
     flex-direction: column;
     gap: 10px;
   }
-}/* Adicione isso ao seu CSS */
+}
 .header-right {
   display: flex;
   align-items: center;
