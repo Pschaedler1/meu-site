@@ -427,42 +427,30 @@ body {
   }
 }
 
-/* Adicione isso ao seu CSS */
-.header-right {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-}
-
-.nav-links {
-  display: flex;
-  gap: 1.5rem;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.nav-links a {
-  color: white;
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 1.1rem;
-  transition: color 0.3s;
-}
-
-.nav-links a:hover {
-  color: #ffd700;
-}
-
-/* Ajuste para mobile */
-@media (max-width: 768px) {
-  .header-right {
-    flex-direction: column;
-    gap: 1rem;
-    margin-top: 1rem;
+@media (max-width: 480px) {
+  body {
+    padding-top: 160px;
+  }
+  
+  .logo h1 {
+    font-size: 1.5rem;
   }
   
   .nav-links {
-    gap: 1rem;
+    gap: 8px;
+  }
+  
+  .nav-links li a {
+    font-size: 0.9rem;
+  }
+  
+  .profile-pic {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .skill-card {
+    padding: 15px;
+    font-size: 1rem;
   }
 }
