@@ -154,7 +154,7 @@ body {
   color: #555;
 }
 
-/* Seção Hard Skills - ESTILO ATUALIZADO */
+/* Seção Hard Skills */
 .skills {
   background: linear-gradient(135deg, #000814, #001D3D);
   padding: 4rem 2rem;
@@ -424,7 +424,6 @@ body {
   }
 }
 
-/* --- AQUI ENTRA O NOVO CSS QUE VOCÊ MANDOU: --- */
 
 header {
   background: linear-gradient(135deg, #000814, #001D3D);
@@ -439,7 +438,7 @@ header h1 {
 }
 
 header .highlight {
-  color: #FFD700; /* cor amarela para destacar o nome */
+  color: #FFD700; 
 }
 
 header p {
